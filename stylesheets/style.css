@@ -537,6 +537,27 @@ border-right: 16px solid transparent;
   top:87px;
 }
 
+.competitors-scales-header-hr,.competitors-scales-right-bowl{
+
+  -webkit-transition:all 600ms ease-out;
+  -moz-transition:all 600ms ease-out;
+  -ms-transition:all 600ms ease-out;
+  transition:all 600ms ease-out;
+}
+
+.competitors-scales-block.right-win .competitors-scales-header-hr{
+  -webkit-transform: rotate(-7deg);
+  -moz-transform: rotate(-7deg);
+  -ms-transform: rotate(-7deg);
+  transform:rotate (-7deg);
+}
+.competitors-scales-block.right-win .competitors-scales-left-bowl{
+  top:136px;
+}
+.competitors-scales-block.right-win .competitors-scales-right-bowl{
+  top: 60px;
+}
+
 /*Слайд №3 Calculator*/
 .calculator-block{
   display: block;
