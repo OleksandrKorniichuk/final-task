@@ -18,7 +18,22 @@
 })();
 
 /*Анимация 3 слайда*/
+function libra(){
+	var leftCup = document.getElementsByClassName('competitors-scales-block'),
+		rightCup = document.getElementsByClassName('competitors-scales-block'),
+		libra = document.getElementsByClassName('competitors-vertical-hr');
 
+	leftCup[0].addEventListener('click', function(event){
+		libra[0].classList.add('left-win');
+		libra[0].classList.remove('left-win');
+	});
+	rightCup[0].addEventListener('click', function(event){
+		libra[0].classList.add('left-win');
+		libra[0].classList.remove('left-win');
+	});
+
+};
+libra();
 
 /*function ReservationsViewModel(rotate_right_hr, rotateRightHr){
 	var self = this;    

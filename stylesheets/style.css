@@ -509,6 +509,39 @@ border-right: 16px solid transparent;
   -webkit-animation: rotateRightHr 2s linear 1;   
 }
 
+.competitors-scales-header-hr{
+  -webkit-transform-origin:50% 50%;
+  -moz-transform-origin:50% 50%;
+  -ms-transform-origin:50% 50%;
+  transform-origin:50% 50%;
+}
+
+.competitors-scales-header-hr,.competitors-scales-left-bowl{
+
+  -webkit-transition:all 600ms ease-out;
+  -moz-transition:all 600ms ease-out;
+  -ms-transition:all 600ms ease-out;
+  transition:all 600ms ease-out;
+}
+
+.competitors-scales-block.left-win .competitors-scales-header-hr{
+  -webkit-transform: rotate(7deg);
+  -moz-transform: rotate(7deg);
+  -ms-transform: rotate(7deg);
+  transform:rotate (7deg);
+}
+.competitors-scales-block.left-win .competitors-scales-left-bowl{
+  top:109px;
+}
+.competitors-scales-block.left-win .competitors-scales-right-bowl{
+  top:87px;
+}
+
+/*Слайд №3 Calculator*/
+.calculator-block{
+  display: block;
+}
+
 /*Анимация к слайду №1*/
 @-webkit-keyframes columnAnimationBlue {
   0% {
@@ -560,12 +593,4 @@ border-right: 16px solid transparent;
     opacity: 1;
   }
 }
-/*Анимация к слайду №3 Сompetitors*/
-@-webkit-keyframes rotateRightHr {
-  0% {
-    -webkit-transform: rotate(0deg);    
-  } 
-  100% {
-    -webkit-transform: rotate(10deg);
-  }
-}
+
