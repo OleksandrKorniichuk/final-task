@@ -353,6 +353,9 @@ border-right: 16px solid transparent;
   -webkit-transform: rotate(116deg);
   transform: rotate(116deg);
 }
+.competitors-scales-right-bowl:after{
+    background-color: #1685a2;
+  }
 .competitors-scales-left-bowl:before{
   content: " ";
   position: absolute;
@@ -365,6 +368,9 @@ border-right: 16px solid transparent;
   transform-origin: 0 100%;
   -webkit-transform: rotate(68deg);
   transform: rotate(68deg);
+}
+.competitors-scales-right-bowl:before{
+  background-color: #1685a2;
 }
 .competitors-scales-left-text{
   position: relative;
@@ -422,9 +428,87 @@ border-right: 16px solid transparent;
   font-weight: 700;
   text-align: center;
   color: white;
-  
-
 }
+.competitors-scales-footer{
+  position: relative;
+  float: left;
+  top: 277px;
+  color: #5b2c81;
+  font-weight: 700;
+}
+.competitors-scales-footer sup{
+  vertical-align: super;
+  font-size: smaller;
+}
+.competitors-scales-right-bowl{
+  top: 76px;
+  left: 91px;
+  background: -webkit-linear-gradient(90deg, #1685a2 36.66%,  transparent 36.66%);
+}
+.competitors-scales-right-link{
+  display: block;
+  position: relative;
+  float: right;
+  width: 240px;    
+  top: 31px;
+}
+.competitors-scales-right-top-link{
+  position: relative;   
+}
+.competitors-scales-right-link-square{
+  display: block;
+  position: relative;
+  float: left;
+  width: 26px;
+  height: 26px;
+  background-color: #ff0090;
+}
+.competitors-scales-right-link-square-red{
+  background-color: #1685a2;
+}
+.competitors-scales-right-link-text{
+  position: relative; 
+  left: 8px; 
+  font-family: FrutigerBoldCond, Arial;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 26px;
+  color: black;
+  cursor: pointer;
+}
+.competitors-scales-right-bottom-link{
+  margin-top: 8px;
+}
+.footer-square-for-competitors-scales{
+  display: block;
+  position: relative;
+  float: right;
+  width: 145px;
+  height: 102px;
+  top: -60px;
+  right: 66px;
+  background-color: white;
+  opacity: 0.85;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.81);
+  z-index: 1;
+}
+.footer-square-for-competitors-scales p{
+  padding-top: 20px;
+  font-family: FrutigerLTStd-Black;
+  font-size: 16px;
+  text-align: center;
+  color: #432171;
+  text-align: center;
+  line-height: 1.3em;
+}
+.competitors-scales-footer-text{
+  top: 70px;
+}
+.rotate_right_hr{
+  -webkit-animation: rotateRightHr 2s linear 1;   
+}
+
 /*Анимация к слайду №1*/
 @-webkit-keyframes columnAnimationBlue {
   0% {
@@ -477,3 +561,11 @@ border-right: 16px solid transparent;
   }
 }
 /*Анимация к слайду №3 Сompetitors*/
+@-webkit-keyframes rotateRightHr {
+  0% {
+    -webkit-transform: rotate(0deg);    
+  } 
+  100% {
+    -webkit-transform: rotate(10deg);
+  }
+}
