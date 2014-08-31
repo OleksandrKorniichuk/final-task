@@ -1,60 +1,479 @@
+/*Кодировка*/
 @charset 'utf-8';
+/*Сброс CSS*/
 * {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  vertical-align: baseline;
+  font-size: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
   margin: 0;
   padding: 0;
 }
+/*Подключение шрифтов*/
 @font-face {
-    font-family: 'zocial';
-    src: url('../fonts/zocial/zocial.eot');
-    src: url('../fonts/zocial/zocial.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/zocial/zocial.woff') format('woff'),
-         url('../fonts/zocial/zocial.ttf') format('truetype');
+    font-family: 'FrutigerBoldCond';
+    src: url('../fonts/Frutiger/FrutigerBoldCond.ttf');    
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'RobotoCondensed-Regular';
-    src: url('../fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.eot');
-    src: url('../fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.woff') format('woff'),
-         url('../fonts/RobotoCondensed-Regular/RobotoCondensed-Regular.ttf') format('truetype');
+    font-family: 'FrutigerLTStd-Black';
+    src: url('../fonts/Frutiger/FrutigerLTStd-Black.otf');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'ptSansBold';
-    src: url('../fonts/ptSansBold/ptSansBold.eot');
-    src: url('../fonts/ptSansBold/ptSansBold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ptSansBold/ptSansBold.woff') format('woff'),
-         url('../fonts/ptSansBold/ptSansBold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ptSans';
-    src: url('../fonts/ptSans/ptSans.eot');
-    src: url('../fonts/ptSans/ptSans.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/ptSans/ptSans.woff') format('woff'),
-         url('../fonts/ptSans/ptSans.ttf') format('truetype');        
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'm-brody';
-    src: url('../fonts/m-brody/m-brody.eot');
-    src: url('../fonts/m-brody/m-brody.eot?#iefix') format('embedded-opentype');
-    src: url('../fonts/m-brody/m-brody.woff') format('woff');     
-    src: url('../fonts/m-brody/m-brody.ttf') format('truetype');
+    font-family: 'Frutiger-LT-45-Light';
+    src: url('../fonts/Frutiger/Frutiger-LT-45-Light.ttf');    
     font-weight: normal;
     font-style: normal;
 }
 body{  
+
+}
+/*Главная обертка*/
+.wrapper{
+  display: block;
+  margin: 0 auto;
+  width: 1024px;
+  height: 768px;
+  background-image: url(../assets/images/body-bg.jpg);  
+  background-repeat: no-repeat;
+}
+/*Навигация по слайдам*/
+nav{
+  width: 100%;
+  height: 48px;
+  background-color: #e8e8e8;
+  background: -webkit-linear-gradient(bottom, #e8e8e8 0%, #fbfbfb 100%);
+  background: -moz-linear-gradient(bottom, #e8e8e8 0%, #fbfbfb 100%);
+  background: -ms-linear-gradient(bottom, #e8e8e8 0%, #fbfbfb 100%);
+  background: -o-linear-gradient(bottom, #e8e8e8 0%, #fbfbfb 100%);
+  background: linear-gradient(bottom, #e8e8e8 0%, #fbfbfb 100%);
+  box-shadow: 0px 3px 4px -2px rgba(0, 0, 0, 0.23);
+}
+/*Стиль списка навигации*/
+.nav-tab{
+  display: block;
+  width: 194px;
+  height: 100%;
+  float: left;  
+  background-image: linear-gradient(0deg, #d1d1d1, #d1d1d1 100%);
+  background-repeat: no-repeat, no-repeat;
+  background-size: 1px 95%;
+  background-origin: padding-box, border-box;
+  border-right: 1px solid transparent;  
+  text-align: center;
+  line-height: 48px;
+  list-style: none;  
+  cursor: pointer;
+}
+.nav-tab-item{
+  display: block;
+  width: 194px;
+  height: 100%;
+  font-family: FrutigerBoldCond, Arial;
+  font-weight: 400;
+  font-size: 15px;  
+  line-height: 48px;
+  color: #5e5968;
+  text-shadow: 0px 0px 1px #bdbcbf;
+  cursor: pointer;
+}
+.nav-tab-item:hover{
+  color: red;
+}
+.nav-tab-item-active{
+  font-size: 18px;
+}
+/*Cлайд №1 graphics*/
+.page{
+  display: none;
+}
+.page.slider-active{
+  display: block;
+}
+.graphics-header{
+  margin-top: 90px;
+  font-family: FrutigerLTStd-Black;
+  font-size: 28px;
+  text-align: center;
+  color: #432171;
+}
+.graphics-header sup{
+  vertical-align: super;
+  font-size: smaller;
+  padding-left: 4px;
+}
+.graphics-name-axis-y{
+  position: relative;
+  top: 163px;
+  left: 110px;
+  font-family: FrutigerLTStd-Black, Arial;
+  font-size: 15px;
+  font-weight: 400;
+  color: black;
+}
+.graphics-name-axis-y sup{
+  vertical-align: super;
+  font-size: smaller;
+}
+.graphics-table{
+  position: relative;
+  display: block;
+  width: 597px;
+  height: 361px;
+  float: left;
+  top: 97px;
+  left: 215px;
+  border:2px solid #4a2278;
+  -webkit-border-radius: 0px 20px 0px 20px;
+  border-radius: 0px 20px 0px 20px;
   background-color: white;
-  background-image: url(../assets/images/content-bg.jpg);
-  background-repeat: repeat;    
+  background-image: -webkit-linear-gradient(0deg, #dad9da 8.3%, white 8.3%);
+}
+.graphics-axis-number{
+  position: relative;  
+  float: left;
+  width: 60px;
+  top: 34px;
+  left: 36px;
+  list-style: none;
+}
+.graphics-axis-number li{
+  padding-bottom: 13px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.graphics-table-title{
+  position: relative;  
+  top: 25px;  
+  font-family: FrutigerLTStd-Black;
+  text-align: center;
+}
+.graphics-column-blue{
+  display: block;
+  position: relative; 
+  float: left;
+  width: 135px;
+  height:242px;
+  top: 35px;
+  left: 93px;
+  background-color: #1785a3;
+  border-radius: 10px 10px 0px 0px;
+  -webkit-animation: columnAnimationBlue 1s linear 1; 
+  -webkit-animation-direction:alternate;
+}
+.graphics-column-text-top{
+  width: 100%;
+  position: absolute;
+  float: left;
+  opacity: 1;
+  top: 10px;  
+  font-family: FrutigerLTStd-Black;
+  text-align: center;
+  color: white;
+  -webkit-animation: columnAnimationText 2s linear 1;
+}
+.graphics-column-text-bottom{
+  width: 100%;
+  position: absolute;
+  bottom: 5px;  
+  opacity: 1;
+  font-family: FrutigerLTStd-Black;
+  text-align: center;
+  color: white;
+  -webkit-animation: columnAnimationText 2s linear 1;
+}
+.graphics-column-red{
+  display: box;
+  position: relative;
+  width: 135px;
+  height:172px;
+  top: 105px;
+  left: 288px;
+  background-color: #e3007c;
+  border-radius: 10px 10px 0px 0px;
+  -webkit-animation: columnAnimationRed 1s linear 1;  
+}
+.graphics-hr{
+  position: relative;
+  display: block;
+  float: right;
+  width: 548px;
+  height: 4px;
+  top: 18px;
+  margin: 0;
+  padding: 0;
+  background-color: #4a2278;
+}
+.graphics-name-axis-x-for-zero{
+  position: relative;
+  float: left;
+  top: 25px;
+  left: 44px;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 700;
+}
+.graphics-name-axis-x-for-cancer{
+  position: relative;
+  float: right;
+  top: 25px;
+  right: 250px;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: 700;
+}
+.graphics-person{
+  display: block;
+  position: relative;
+  float: right;
+  top: 360px;
+  right: 100px;
+}
+.graphics-footer-text{
+  position: relative;
+  font-family: Frutiger-LT-45-Light;
+  font-size: 14px;
+  float: left;
+  top: 180px;
+  left: 68px;
+}
+.graphics-footer-text sup{
+  vertical-align: super;
+  font-size: smaller;
+}
+
+/*Слайд №2 Сompetitors*/
+.competitors-header{ 
+  font-family: Myriad Pro, Arial;
+  font-size: 30px;
+  text-align: center;
+  color: #432171;
+}
+.competitors-scales{
+  display: block;
+  width: 892px;
+  height: 383px;
+  margin: 60px auto;  
+  background-color: white;
+  opacity: 0.7;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.81);
+}
+.competitors-double-sided-arrow{
+  float: left;
+  width: 200px;
+  height: 100%;
+}
+.competitors-double-sided-arrow-higher{
+  position: relative; 
+  top: 28px;
+  font-family: FrutigerBoldCond, Arial;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+}
+.competitors-double-sided-arrow-lower{
+  top: 50px;
+
+}
+.competitors-vertical-hr{
+display: block;
+position: relative;
+width: 12px;
+height: 203px;
+margin: 30px auto;
+top: 40px;
+background-color: red;
+background: -webkit-linear-gradient(180deg, #ff0090, #1785a3);
+background: linear-gradient(180deg, #ff0090, #1785a3);
+}
+.competitors-vertical-hr:after {
+content: " ";
+position: absolute;
+bottom: -27px;
+left: -9px;
+border-top: 27px solid #1785a3;
+border-left: 16px solid transparent;
+border-right: 16px solid transparent;
+}
+.competitors-vertical-hr:before{
+content: " ";
+position: absolute;
+top: -27px;
+left: -9px;
+border-bottom: 27px solid #ff0090;
+border-left: 16px solid transparent;
+border-right: 16px solid transparent;
+}
+.competitors-scales-block{
+  display: block;
+  float: left;
+  width: 450px;
+  height: 100%;  
+}
+.competitors-scales-header-hr{
+  display: block;
+  position: relative;
+  top: 64px;
+  width: 278px;
+  height: 8px;
+  background-color: #5b2c81;
+  margin: 0 auto;
+  z-index: 1;
+}
+.competitors-scales-left-bowl{
+  display: block;
+  position: relative;
+  float: left;
+  left: 37px;
+  width: 150px;
+  height: 150px;
+  top: 125px;
+  background-color: #ccc;
+  background: -webkit-linear-gradient(90deg, #ff0090 36.66%,  transparent 36.66%);
+  border-radius: 50%;
+}
+.competitors-scales-left-bowl:after{
+  content: " ";
+  position: absolute;
+  width: 175px;
+  height: 4px;
+  top: -65px;
+  left: 80px;
+  background-color: #ff0090;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: rotate(116deg);
+  transform: rotate(116deg);
+}
+.competitors-scales-left-bowl:before{
+  content: " ";
+  position: absolute;
+  width: 171px;
+  height: 4px;
+  top: -65px;
+  left: 80px;
+  background-color: #ff0090;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: rotate(68deg);
+  transform: rotate(68deg);
+}
+.competitors-scales-left-text{
+  position: relative;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  top: 110px;
+}
+.competitors-scales-stand{
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 180px;
+  background-color: #5b2c81;
+  float: left;
+  top: 90px;
+  left: 65px;
+}
+.competitors-scales-stand:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  left: 0px;
+  top: -27px;
+  border-bottom: 27px solid #5b2c81;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+}
+.competitors-scales-stand:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 5px;
+  left: -4px;
+  bottom: 0;
+  background-color: #5b2c81;
+  border-radius:5px 5px 0 0; 
+}
+.competitors-scales-stand-footer{
+  position: relative;
+  display: block;
+  width: 148px;
+  height: 25px;
+  background-color: #5b2c81;
+  top: 268px;
+  left: 151px;
+}
+.competitors-scales-stand-footer p{
+  position: absolute;
+  top: 4px;
+  left: 42px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  
+
+}
+/*Анимация к слайду №1*/
+@-webkit-keyframes columnAnimationBlue {
+  0% {
+    height: 0px; top:277px;
+  } 
+  100% {
+    height: 242px; top:35px;
+  }
+}
+@-keyframes columnAnimationBlue {
+  0% {
+    height: 0px; top:277px;
+  } 
+  100% {
+    height: 242px; top:35px;
+  }
 }
 
 
-
-
-
+@-webkit-keyframes columnAnimationRed {
+  0% {
+    height: 0px; top:277px;
+  } 
+  100% {
+    height: 172px; top:105px;
+  }
+}
+@-keyframes columnAnimationRed {
+  0% {
+    height: 0px; top:277px;
+  } 
+  100% {
+    height: 172px; top:105px;
+  }
+}
+@-webkit-keyframes columnAnimationText {
+  0%,50% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+@-keyframes columnAnimationText {
+  0%,50% {
+    opacity: 0;
+  } 
+  100% {
+    opacity: 1;
+  }
+}
+/*Анимация к слайду №3 Сompetitors*/
