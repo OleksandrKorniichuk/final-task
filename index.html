@@ -51,7 +51,7 @@
                 <p class="graphics-name-axis-x-for-zero">0</p>
                 <p class="graphics-name-axis-x-for-cancer">Cancer</p>
             </div>
-            <img class="graphics-person" src="assets/images/graphics/person.png">
+            <img class="graphics-person" src="assets/images/graphics/person.png" alt="person">
             <p class="graphics-footer-text"><sup>a</sup>Xarelto is contraindicated in lesions or conditions, 
                 if they are considered to be a significant risk for major<br>
                 bleeding, which may include the presence of malignant neoplasms at high risk of bleeding.<br>
@@ -60,118 +60,152 @@
         <section class="page">
             <h1 class="graphics-header">Xarelto<sup>®</sup> Estimator of Resources Saved</h1>
             <div class="calculator-block">
-                <div class="col-left">
-                    <div class="enter-number">
-                        <div class="headline-ent-num">
+                <div class="calculator-block-left">
+                    <dl class="calculator-input-number">
+                        <dt class="calculator-input-number-block">
                             <input type="text" placeholder="Enter number of DVT patients here">
-                            <input type="button" value="CALCULATE">
-                            <input type="button" value="?" class="question">
-                        </div>
-                        <p class="enter-number-text">Assumptions to estimate calculations: proportion of patients whit DVT contraindicated for Xarelto or LMWH/VKA<sup>1,2</sup> =7.5%<br>
-                        <b>Number of patients with DVT - 7.5% = <span>[A]</span></b> Total number of DVT patients eligible for dual LMWH/VKA or Xarelto</p>
-                    </div>
-                    <div class="item-select-calc">
-                        <div class="headline">
+                            <input type="button" value="CALCULATE" class="calculator-input-number-calculate">
+                            <input type="button" value="?" class="calculator-input-number-quest">
+                        </dt>
+                        <dd class="calculator-input-number-block-bottom">
+                            <p class="calculator-input-number-block-bottom-text">
+                                Assumptions to estimate calculations: proportion of patients whit DVT contraindicated for
+                                Xarelto or LMWH/VKA<sup>1,2</sup> =7.5%<br>
+                                <b>Number of patients with DVT - 7.5% =<span> [A]</span></b> 
+                                Total number of DVT patients eligible for dual LMWH/VKA or Xarelto
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="calculator-block-value">
+                        <dt class="calculator-block-value-header">
                             <p>Injections avoided<sup>3-7</sup></p>
                             <input type="text" value="[B + C]">
-                        </div>
-                        <div class="item-select-text">
-                            <input type="button" value="+" class="open">
-                            <p>Injections Avoided = number of LMWH injections received by cancer patients with DVT + LMWH injections received by DVT patients without cancer</p>
-                        </div>
-                    </div>
-                    <div class="item-select-calc">
-                        <div class="headline">
+                        </dt>
+                        <dd class="calculator-block-value-footer">
+                            <button class="calculator-block-value-footer-add">+</button>
+                            <p>Injections Avoided = number ofg LMWH injections received by cancer patients with DVT + LMWH
+                                injections received by DVT patients without cancer
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="calculator-block-value">
+                        <dt class="calculator-block-value-header">
                             <p>INR clinic visits avoided <sup>3,7,8</sup></p>
                             <input type="text" value="[E]">
-                        </div>
-                        <div class="item-select-text">
-                            <input type="button" value="+" class="open">
-                            <p>INR clinic visits avoided = number of DVT patients eligible for VKA treatment x number of INR monitoring visits per patient</p>
-                        </div>
-                    </div>
-                    <div class="item-select-calc">
-                        <div class="headline">
+                        </dt>
+                        <dd class="calculator-block-value-footer">
+                            <button class="calculator-block-value-footer-add">+</button>
+                            <p>INR clinic visits avoided = number of DVT patients eligible for VKA treatment x number of
+                                INR monitoring visits per patient
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="calculator-block-value">
+                        <dt class="calculator-block-value-header">
                             <p>Nurse visits avoided<sup>9</sup></p>
                             <input type="text" value="[G]">
-                        </div>
-                        <div class="item-select-text">
-                            <input type="button" value="+" class="open">
-                            <p>Nurse assistanse visits avoided = number of non-cancer DVT patients eligible for initial LMWH treatment x proportion of these patients treated by nurses in their own homes x mean number of LMWH injections administered</p>
-                        </div>
-                    </div>
-                    <div class="item-select-calc">
-                        <div class="headline">
+                        </dt>
+                        <dd class="calculator-block-value-footer">
+                            <button class="calculator-block-value-footer-add">+</button>
+                            <p>Nurse assistanse visits avoided = number of non-cancer DVT patients eligible
+                                for initial LMWH treatment x proportion of these patients treated by nurses
+                                in their own homes x mean number of LMWH injections administered
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="calculator-block-value">
+                        <dt class="calculator-block-value-header">
                             <p>Hospital bed days saved<sup>10</sup></p>
                             <input type="text" value="[H]">
-                        </div>
-                        <div class="item-select-text">
-                            <input type="button" value="+" class="open">
-                            <p>Hospital bed days saved = number of eligible DVT patients x proportion of DVT patients hospitalised x number of hospital bed days per DVT patient treated with Xarelto</p>
-                        </div>
-                    </div>
+                        </dt>
+                        <dd class="calculator-block-value-footer">
+                            <button class="calculator-block-value-footer-add">+</button>
+                            <p>Hospital bed days saved = number of eligible DVT patients x proportion
+                                of DVT patients hospitalised x number of hospital bed days per DVT patient treated with Xarelto
+                            </p>
+                        </dd>
+                    </dl>
                 </div>
-                <div class="col-right">
+                <div class="calculator-block-right">
                     <div class="enter-number">
-                        <div class="headline-ent-num">
+                        <dt class="calculator-input-number-block">
                             <input type="text" placeholder="Enter number of patients with PE here">
-                            <input type="button" value="CALCULATE">
-                            <input type="button" value="?" class="question">
-                        </div>
-                        <p class="enter-number-text">Assumptions to estimate calculations: proportion of patients whit PE contraindicated for Xarelto or LMWH/VKA<sup>1,2</sup> = 15%<br>
-                        <b>Number of patients with PE - 15% = <span>[A]</span></b> Total number of PEv patients eligible for dual LMWH/VKA or Xarelto</p>
+                            <input type="button" value="CALCULATE" class="calculator-input-number-calculate">
+                            <input type="button" value="?" class="calculator-input-number-quest">
+                        </dt>
+                        <dd class="calculator-input-number-block-bottom">
+                            <p class="calculator-input-number-block-bottom-text">
+                                Assumptions to estimate calculations: proportion of patients whit PE contraindicated
+                                 for Xarelto or LMWH/VKA<sup>1,2</sup> = 15%<br>
+                                <b>Number of patients with PE - 15% = <span>[A]</span></b>
+                                Total number of PEv patients eligible for dual LMWH/VKA or Xarelto
+                            </p>
+                        </dd>
                     </div>
-                    <div class="item-select-calc">
-                        <div class="headline">
+                    <dl class="calculator-block-value">
+                        <dt class="calculator-block-value-header">
                             <p>Injections avoided<sup>3-6,11</sup></p>
                             <input type="text" value="[B + C]">
-                        </div>
-                        <div class="item-select-text">
-                            <input type="button" value="+" class="open">
-                            <p>Injections Avoided = number of LMWH injections received by cancer patients with PE + LMWH injections received by PE patients without cancer</p>
-                        </div>
-                    </div>
-                    <div class="item-select-calc">
-                        <div class="headline">
+                        </dt>
+                        <dd class="calculator-block-value-footer">
+                            <button class="calculator-block-value-footer-add">+</button>
+                            <p>Injections Avoided = number of LMWH injections received by cancer patients with
+                                PE + LMWH injections received by PE patients without cancer
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="calculator-block-value">
+                       <dt class="calculator-block-value-header">
                             <p>INR clinic visits avoided <sup>3,8,11</sup></p>
                             <input type="text" value="[I]">
-                        </div>
-                        <div class="item-select-text">
-                            <input type="button" value="+" class="open">
-                            <p>INR clinic visits avoided = number of PE patients eligible for VKA treatment x number of INR monitoring visits per patient</p>
-                        </div>
-                    </div>
-                    <div class="item-select-calc">
-                        <div class="headline">
+                        </dt>
+                        <dd class="calculator-block-value-footer">
+                            <button class="calculator-block-value-footer-add">+</button>
+                            <p>INR clinic visits avoided = number of PE patients eligible for VKA treatment
+                                x number of INR monitoring visits per patient
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="calculator-block-value">
+                        <dt class="calculator-block-value-header">
                             <p>Hospital bed days saved<sup>10</sup></p>
                             <input type="text" value="[J]">
-                        </div>
-                        <div class="item-select-text">
-                            <input type="button" value="+" class="open">
-                            <p>Hospital bed days saved = number of eligible PE patients x proportion of PE patients hospitalised x number of hospital bed days per PE patient treated with Xarelto</p>
-                        </div>
-                    </div>
+                        </dt>
+                        <dd class="calculator-block-value-footer">
+                            <button class="calculator-block-value-footer-add">+</button>
+                            <p>Hospital bed days saved = number of eligible PE patients x proportion of PE
+                                patients hospitalised x number of hospital bed days per PE patient treated with Xarelto
+                            </p>
+                        </dd>
+                    </dl>
                 </div>
-                <div class="calculate-discript">
-                    <p class="headline">Combined DVT + PE Resour Saved</p>
-                    <div class="item-discript-calc">
+                <div class="calculator-block-footer">
+                    <div class="calculator-block-footer-top">
+                        <p>Combined DVT + PE Resour Saved</p>
+                    </div>
+                    <div class="calculator-block-footer-item">
                         <p>Injections avoided <sup>3-7,11</sup></p>
-                        <p class="formula">[DVT+PE]</p>
+                        <input type="text" value="[DVT+PE]">
                     </div>
-                    <div class="item-discript-calc">
+                    <div class="calculator-block-footer-item">
                         <p>INR clinic visits avoided<sup>3,7,8,11</sup></p>
-                        <p class="formula">[DVT+PE]</p>
+                         <input type="text" value="[DVT+PE]">
                     </div>
-                    <div class="item-discript-calc">
-                        <p>Nurse visit avoided<sup>9</sup></p>
-                        <p class="formula">[DVT]</p>
+                    <div class="calculator-block-footer-item">
+                        <p>Nurse visit avoided<sup>9</sup></p>                        
+                        <input type="text" value="[DVT]">                        
                     </div>
-                    <div class="item-discript-calc">
-                        <p>Hospital bed days saved<sup>10</sup></p>
-                        <p class="formula">[DVT+PE]</p>
+                    <div class="calculator-block-footer-item">
+                        <p>Hospital bed days saved<sup>10</sup></p>                        
+                        <input type="text" value="[DVT+PE]">                        
                     </div>
                 </div>
             </div>
+            <p class="graphics-footer-text competitors-scales-footer-text"><sup>a</sup>Xarelto is contraindicated
+                in lesions or conditions, 
+                if they are considered to be a significant risk for major bleeding, which may include the presence<br>
+                of malignant neoplasms at high risk of bleeding. <sup>b</sup>Outcome: symptomatic, recurrent VTE.
+            </p>
         </section>
         <section class="page">
             <h1 class="graphics-header competitors-header">Xarelto® DVT Patients Reported Higher Satisfaction<sup>a,16</sup> 
