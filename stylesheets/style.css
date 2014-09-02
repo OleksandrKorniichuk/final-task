@@ -765,6 +765,7 @@ border-right: 16px solid transparent;
   font-weight: 700;
   padding-left: 9px;
 }
+/*Свайп*/
 
 /*Анимация к слайду №1*/
 @-webkit-keyframes columnAnimationBlue {
@@ -775,7 +776,7 @@ border-right: 16px solid transparent;
     height: 242px; top:35px;
   }
 }
-@-keyframes columnAnimationBlue {
+@keyframes columnAnimationBlue {
   0% {
     height: 0px; top:277px;
   } 
@@ -793,7 +794,7 @@ border-right: 16px solid transparent;
     height: 172px; top:105px;
   }
 }
-@-keyframes columnAnimationRed {
+@keyframes columnAnimationRed {
   0% {
     height: 0px; top:277px;
   } 
@@ -809,7 +810,7 @@ border-right: 16px solid transparent;
     opacity: 1;
   }
 }
-@-keyframes columnAnimationText {
+@keyframes columnAnimationText {
   0%,50% {
     opacity: 0;
   } 
