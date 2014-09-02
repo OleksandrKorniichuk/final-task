@@ -16,7 +16,7 @@
 })();
 
 /*Анимация 3 слайда*/
-function libra(){
+var ScalesBlock = function (){
 	var RotateLeft = document.getElementsByClassName('competitors-scales-right-top-link'),
 		RotateRight = document.getElementsByClassName('competitors-scales-right-bottom-link'),
 		ScalesBlock = document.getElementsByClassName('competitors-scales-block');
@@ -28,15 +28,14 @@ function libra(){
 		ScalesBlock[0].classList.add('right-win');
 		ScalesBlock[0].classList.remove('left-win');
 	});
-
 };
-libra();
+ScalesBlock();
 
-/*function ReservationsViewModel(rotate_right_hr, rotateRightHr){
+/*function ReservationsViewModel(competitors-scales-block, rotateRightHr){
 	var self = this;    
-    self.rotate_right_hr = ko.observable(rotate_right_hr);      
+    self.competitors-scales-block = ko.observable(competitors-scales-block);      
     this.rotateRightHr = function() {     	   	
-    	this.rotate_right_hr('rotate_right_hr');
+    	this.competitors-scales-block('competitors-scales-block');
     };   
 }
 ko.applyBindings(new ReservationsViewModel());*/

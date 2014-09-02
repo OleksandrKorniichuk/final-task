@@ -63,15 +63,15 @@
                 <div class="calculator-block-left">
                     <dl class="calculator-input-number">
                         <dt class="calculator-input-number-block">
-                            <input type="text" placeholder="Enter number of DVT patients here">
-                            <input type="button" value="CALCULATE" class="calculator-input-number-calculate">
+                            <input type="text" placeholder="Enter number of DVT patients here" data-bind="value: enterNumberLeft">
+                            <input type="button" value="CALCULATE" class="calculator-input-number-calculate" data-bind="click: calculateAll">
                             <input type="button" value="?" class="calculator-input-number-quest">
                         </dt>
                         <dd class="calculator-input-number-block-bottom">
                             <p class="calculator-input-number-block-bottom-text">
                                 Assumptions to estimate calculations: proportion of patients whit DVT contraindicated for
                                 Xarelto or LMWH/VKA<sup>1,2</sup> =7.5%<br>
-                                <b>Number of patients with DVT - 7.5% =<span> [A]</span></b> 
+                                <b>Number of patients with DVT - 7.5% =<span data-bind="text: NumberOfPatientsWithDVT"> [A]</span></b> 
                                 Total number of DVT patients eligible for dual LMWH/VKA or Xarelto
                             </p>
                         </dd>
@@ -79,7 +79,7 @@
                     <dl class="calculator-block-value">
                         <dt class="calculator-block-value-header">
                             <p>Injections avoided<sup>3-7</sup></p>
-                            <input type="text" value="[B + C]">
+                            <input type="text" value="[B + C]" data-bind="value: InjectionsAvoidedCalculationleft">
                         </dt>
                         <dd class="calculator-block-value-footer">
                             <button class="calculator-block-value-footer-add">+</button>
@@ -91,7 +91,7 @@
                     <dl class="calculator-block-value">
                         <dt class="calculator-block-value-header">
                             <p>INR clinic visits avoided <sup>3,7,8</sup></p>
-                            <input type="text" value="[E]">
+                            <input type="text" value="[E]" data-bind="value: InrClinicVisitsAvodedLeft">
                         </dt>
                         <dd class="calculator-block-value-footer">
                             <button class="calculator-block-value-footer-add">+</button>
@@ -103,7 +103,7 @@
                     <dl class="calculator-block-value">
                         <dt class="calculator-block-value-header">
                             <p>Nurse visits avoided<sup>9</sup></p>
-                            <input type="text" value="[G]">
+                            <input type="text" value="[G]" data-bind="value: NurseVisitsAvoidedLeft">
                         </dt>
                         <dd class="calculator-block-value-footer">
                             <button class="calculator-block-value-footer-add">+</button>
@@ -116,7 +116,7 @@
                     <dl class="calculator-block-value">
                         <dt class="calculator-block-value-header">
                             <p>Hospital bed days saved<sup>10</sup></p>
-                            <input type="text" value="[H]">
+                            <input type="text" value="[H]" data-bind="value: HospitalBedDaysSavesLeft">
                         </dt>
                         <dd class="calculator-block-value-footer">
                             <button class="calculator-block-value-footer-add">+</button>
@@ -129,15 +129,15 @@
                 <div class="calculator-block-right">
                     <div class="enter-number">
                         <dt class="calculator-input-number-block">
-                            <input type="text" placeholder="Enter number of patients with PE here">
-                            <input type="button" value="CALCULATE" class="calculator-input-number-calculate">
+                            <input type="text" placeholder="Enter number of patients with PE here" data-bind="value: enterNumberRight">
+                            <input type="button" value="CALCULATE" class="calculator-input-number-calculate" data-bind="click: calculateAll">
                             <input type="button" value="?" class="calculator-input-number-quest">
                         </dt>
                         <dd class="calculator-input-number-block-bottom">
                             <p class="calculator-input-number-block-bottom-text">
                                 Assumptions to estimate calculations: proportion of patients whit PE contraindicated
                                  for Xarelto or LMWH/VKA<sup>1,2</sup> = 15%<br>
-                                <b>Number of patients with PE - 15% = <span>[A]</span></b>
+                                <b>Number of patients with PE - 15% = <span data-bind="text: NumberOfPatientsWithDVTRight">[A]</span></b>
                                 Total number of PEv patients eligible for dual LMWH/VKA or Xarelto
                             </p>
                         </dd>
@@ -145,7 +145,7 @@
                     <dl class="calculator-block-value">
                         <dt class="calculator-block-value-header">
                             <p>Injections avoided<sup>3-6,11</sup></p>
-                            <input type="text" value="[B + C]">
+                            <input type="text" value="[B + C]" data-bind="value: InjectionsAvoidedCalculationRight">
                         </dt>
                         <dd class="calculator-block-value-footer">
                             <button class="calculator-block-value-footer-add">+</button>
@@ -157,7 +157,7 @@
                     <dl class="calculator-block-value">
                        <dt class="calculator-block-value-header">
                             <p>INR clinic visits avoided <sup>3,8,11</sup></p>
-                            <input type="text" value="[I]">
+                            <input type="text" value="[I]" data-bind="value: InrClinicVisitsAvodedRight">
                         </dt>
                         <dd class="calculator-block-value-footer">
                             <button class="calculator-block-value-footer-add">+</button>
@@ -169,7 +169,7 @@
                     <dl class="calculator-block-value">
                         <dt class="calculator-block-value-header">
                             <p>Hospital bed days saved<sup>10</sup></p>
-                            <input type="text" value="[J]">
+                            <input type="text" value="[J]" data-bind="value: HospitalBedDaysSavesRight">
                         </dt>
                         <dd class="calculator-block-value-footer">
                             <button class="calculator-block-value-footer-add">+</button>
@@ -185,19 +185,19 @@
                     </div>
                     <div class="calculator-block-footer-item">
                         <p>Injections avoided <sup>3-7,11</sup></p>
-                        <input type="text" value="[DVT+PE]">
+                        <input type="text" value="[DVT+PE]" data-bind="value: NurseVisitsAvoidedDVT">
                     </div>
                     <div class="calculator-block-footer-item">
                         <p>INR clinic visits avoided<sup>3,7,8,11</sup></p>
-                         <input type="text" value="[DVT+PE]">
+                         <input type="text" value="[DVT+PE]" data-bind="value: InrClinicVisitsAvodedDVTPE">
                     </div>
                     <div class="calculator-block-footer-item">
                         <p>Nurse visit avoided<sup>9</sup></p>                        
-                        <input type="text" value="[DVT]">                        
+                        <input type="text" value="[DVT]" data-bind="value: InjectionsAvoidedDVTPE">                        
                     </div>
                     <div class="calculator-block-footer-item">
                         <p>Hospital bed days saved<sup>10</sup></p>                        
-                        <input type="text" value="[DVT+PE]">                        
+                        <input type="text" value="[DVT+PE]" data-bind="value: HospitalBedDaysSavesDVTPE">                        
                     </div>
                 </div>
             </div>
@@ -260,8 +260,9 @@
                 <sup>b</sup>Outcome: symptomatic, recurrent VTE.
             </p>
         </section>
-    </div> 
+    </div>
     <script src="scripts/knockout-3.1.0.js"></script>
-    <script type="text/javascript" src="scripts/tab-slider.js"></script>   
+    <script src="scripts/tab-slider.js"></script> 
+    <script src="scripts/calculator.js"></script>   
 </body>
 </html>
